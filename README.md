@@ -47,7 +47,6 @@ In this example, you'd need to set `preserve_query: true` in the endpoints file.
 
 ## Limitations
 
-* If there are any dynamic IDs in the webhook URL (e.g. `https://myshop.example/mollie/webhook/05591cfb-5f8f-4231-929a-09525e00104d`, this won't work. I aim to add this feature next.
 * The application currently does not do any queuing of webhooks. If one forwarding endpoint breaks, the webhook is discarded for the endpoint.
 * Fully synchronous: The endpoints are processed one after another. It might be that they take too long to answer, and Mollie then abandones the webhook and tries again later. This might lead to congestion. Both these point might be fixed by adding a RabbitMQ or something like that in the mix.
 

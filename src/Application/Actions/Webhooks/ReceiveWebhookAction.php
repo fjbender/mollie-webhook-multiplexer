@@ -27,10 +27,16 @@ class ReceiveWebhookAction extends WebhookAction
         }
 
         foreach ($endpoints as $endpoint) {
+            if ($endpoint['preserve_path']) {
+                $path = $endpoint['path'] . '/' . $this->args['params'];
+            } else {
+                $path = $endpoint['path'];
+            }
+
             $uri = new Uri($endpoint['scheme'],
                 $endpoint['host'],
                 array_key_exists('port', $endpoint) ? $endpoint['port'] : null,
-                $endpoint['path'],
+                $path,
                 $endpoint['preserve_query'] ? $this->request->getUri()->getQuery() : ''
                 // todo: add auth
             );

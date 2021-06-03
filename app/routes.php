@@ -17,7 +17,7 @@ return function (App $app) {
         return $response;
     });
 
-    $app->group('/webhooks', function (Group $group) {
+    $app->group('/webhooks[/{params:.*}]', function (Group $group) {
         $group->post('', \App\Application\Actions\Webhooks\ReceiveWebhookAction::class);
         $group->get('', \App\Application\Actions\Webhooks\ReceiveWebhookAction::class); // todo remove
     });
