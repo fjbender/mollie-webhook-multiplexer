@@ -38,12 +38,12 @@ If you're using any of the Mollie default plugins, chances are that they'll set 
     protected function getWebhookUrl()
     {
         // Hack to override webhookUrl
-        $url = Registry::getConfig()->getCurrentShopUrl().'index.php?cl=mollieWebhook';
-        $url = str_replace('myoxidshop.example.com', 'mollie-multiplexer.com', $url);
-        return $url;
+        return 'http://mollie-multiplexer.example.com/webhooks/?cl=mollieWebhook';
         // End Hack
     }
 ```
+
+In this example, you'd need to set `preserve_query: true` in the endpoints file.
 
 ## Limitations
 
