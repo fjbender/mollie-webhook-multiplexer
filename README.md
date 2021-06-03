@@ -16,6 +16,8 @@ You can specify the endpoints in the `endpoints.neon` file. See `endpoints.neon.
 * `git clone https://github.com/fjbender/mollie-webhook-multiplexer`
 * `cd mollie-webhook-multiplexer`
 * `composer install`
+* `cp endoints.neon.dist endpoints.neon`
+* Edit `endpoints.neon` to your needs
 * Either use docker `docker-compose up` or `php -S localhost:8080 -t public/` to serve on http://localhost:8080 for testing
 
 You can test the application by posting a `x-www-form-urlencoded` POST request with `id=tr_12345` as payload to `http://localhost:8080/webhooks`.
