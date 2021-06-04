@@ -38,7 +38,7 @@ If you're using any of the Mollie default plugins, chances are that they'll set 
     protected function getWebhookUrl()
     {
         // Hack to override webhookUrl
-        return 'http://mollie-multiplexer.example.com/webhooks/?cl=mollieWebhook';
+        return 'http://mollie-multiplexer.example.com/webhooks?cl=mollieWebhook';
         // End Hack
     }
 ```
