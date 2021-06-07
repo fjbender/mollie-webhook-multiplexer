@@ -6,7 +6,7 @@
         "webhook"
     ],
     "homepage": "http://github.com/fjbender/mollie-webhook-multiplexer",
-    "license": "BSD-2.0",
+    "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "Florian Bender",
