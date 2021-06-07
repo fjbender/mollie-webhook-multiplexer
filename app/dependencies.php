@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+use App\Application\Config\ConfigProvider;
+use App\Application\Config\ConfigProviderInterface;
 use App\Application\Settings\SettingsInterface;
 use DI\ContainerBuilder;
 use GuzzleHttp\Client;
@@ -34,4 +36,11 @@ return function (ContainerBuilder $containerBuilder) {
              return new Client(['timeout' => 8]);
         }
     ]);
+
+    $containerBuilder->addDefinitions([
+        ConfigProviderInterface::class => function (ContainerInterface $c) {
+            return new ConfigProvider($c);
+        }
+    ]);
+
 };

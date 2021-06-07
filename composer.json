@@ -1,24 +1,17 @@
 {
-    "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
+    "name": "fjbender/mollie-webhook-multiplexer",
+    "description": "A simple webhook multiplexer for Mollie",
     "keywords": [
-        "microframework",
-        "rest",
-        "router",
-        "psr7"
+        "mollie",
+        "webhook"
     ],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
-    "license": "MIT",
+    "homepage": "http://github.com/fjbender/mollie-webhook-multiplexer",
+    "license": "BSD-2.0",
     "authors": [
         {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
-        },
-        {
-            "name": "Pierre Berube",
-            "email": "pierre@lgse.com",
-            "homepage": "http://www.lgse.com/"
+            "name": "Florian Bender",
+            "email": "florian.bender@mollie.com",
+            "homepage": "https://fbender.de"
         }
     ],
     "require": {

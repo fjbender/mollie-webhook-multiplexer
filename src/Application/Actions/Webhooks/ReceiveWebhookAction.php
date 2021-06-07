@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace App\Application\Actions\Webhooks;
 
-use Nette\Neon\Exception;
-use Nette\Neon\Neon;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 use App\Application\Actions\ActionPayload as ActionPayload;
@@ -19,15 +17,8 @@ class ReceiveWebhookAction extends WebhookAction
      */
     protected function action(): Response
     {
-        try {
-            $endpoints = Neon::decode(@file_get_contents('../endpoints.neon'))['endpoints'];
-        } catch (Exception $e) {
-            $this->logger->error('Syntax error in config file: ' . $e->getMessage());
-            return $this->respond(new ActionPayload(500, 'Error, see log for details'));
-        }
-
-        foreach ($endpoints as $endpoint) {
-            if ($endpoint['preserve_path']) {
+        foreach ($this->configProvider->getEndpoints() as $endpoint) {
+            if ($endpoint['preserve_path'] && isset($this->args['params'])) {
                 $path = $endpoint['path'] . '/' . $this->args['params'];
             } else {
                 $path = $endpoint['path'];
