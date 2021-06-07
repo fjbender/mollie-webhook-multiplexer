@@ -47,6 +47,6 @@ class ReceiveWebhookAction extends WebhookAction
             }
         }
 
-        return $this->respond(new ActionPayload(200, "kthxbye"));
+        return $this->respond(new ActionPayload(200, ["kthxbye"]));
     }
 }
