@@ -8,7 +8,7 @@ You can specify the endpoints in the `endpoints.neon` file. See `endpoints.neon.
 
 ## Requirements
 
-* Some recent version of PHP (7.2 or newer should do)
+* Some recent version of PHP (8.0 or newer should do)
 * A web server that allows URL rewrites (a `.htaccess` file for Apache 2 is included)
 
 ## Install the Application locally
