@@ -26,9 +26,9 @@
         "slim/slim": "^4.9"
     },
     "require-dev": {
-        "jangregor/phpstan-prophecy": "^0.8.1",
+        "jangregor/phpstan-prophecy": "1.0.0",
         "phpstan/extension-installer": "^1.1.0",
-        "phpstan/phpstan": "^0.12.99",
+        "phpstan/phpstan": "^1.2.0",
         "phpunit/phpunit": "^9.5.10"
     },
     "config": {
