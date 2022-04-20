@@ -1,3 +1,7 @@
+# Newer Version (with queuing): https://github.com/fjbender/mwm2 
+
+This version still works fine though
+
 # Mollie Webhook Multiplexer
 
 ## What is this?
