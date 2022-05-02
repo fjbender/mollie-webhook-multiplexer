@@ -18,7 +18,7 @@
         "php": "^8.0",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.4",
-        "monolog/monolog": "^2.4",
+        "monolog/monolog": "^2.5",
         "nette/neon": "^3.3",
         "php-di/php-di": "^6.4",
         "psr/http-client": "^1.0",
