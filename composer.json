@@ -29,7 +29,7 @@
         "jangregor/phpstan-prophecy": "1.0.0",
         "phpstan/extension-installer": "^1.1.0",
         "phpstan/phpstan": "^1.7.8",
-        "phpunit/phpunit": "^9.5.20"
+        "phpunit/phpunit": "^9.5.21"
     },
     "config": {
         "process-timeout": 0,
